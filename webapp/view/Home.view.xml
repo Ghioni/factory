@@ -1,0 +1,61 @@
+    <mvc:View
+	controllerName="fac.factory.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <ScrollContainer width="100%" height="100%" vertical="true" horizontal="true">
+        <Table 
+            inset="false"
+            items="{
+                path: 'oModel>/items',
+                factory: '.suppListFactory'
+            }"
+            >
+            <columns>
+                <Column
+                    >
+                    <Text text="SupplierID" />
+                </Column>
+                <Column
+                    >
+                    <Text text="CompanyName" />
+                </Column>
+                <Column
+                    >
+                    <Text text="ContactName" />
+                </Column>
+                <Column
+                    >
+                    <Text text="ContactTitle" />
+                </Column>
+                <Column
+                    >
+                    <Text text="Address" />
+                </Column>
+                <Column
+                    >
+                    <Text text="City " />
+                </Column>
+                <Column
+                    >
+                    <Text text="PostalCode" />
+                </Column>
+                <Column
+                    >
+                    <Text text="Region" />
+                </Column>
+                <Column
+                    >
+                    <Text text="Country" />
+                </Column>
+                <Column
+                    >
+                    <Text text="Phone " />
+                </Column>
+                <Column
+                >
+                <Text text="Fax" />
+            </Column>
+            </columns>
+        </Table>
+    </ScrollContainer>
+</mvc:View>
