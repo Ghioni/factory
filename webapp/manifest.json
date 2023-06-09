@@ -99,7 +99,15 @@
           "target": [
             "TargetHome"
           ]
+        },
+        {
+          "name": "SecondPage",
+          "pattern": "{id}/:region:/{country}}",
+          "target": [
+            "SecondTarget"
+          ]
         }
+
       ],
       "targets": {
         "TargetHome": {
@@ -108,6 +116,13 @@
           "clearControlAggregation": false,
           "viewId": "Home",
           "viewName": "Home"
+        },
+        "SecondTarget":{
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "SecondRoute",
+          "viewName": "SecondView"
         }
       }
     },

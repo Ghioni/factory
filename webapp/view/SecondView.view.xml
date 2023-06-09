@@ -1,0 +1,126 @@
+<mvc:View
+	controllerName="fac.factory.controller.SecondView"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+  <Page title="Home Page"
+  navButtonPress="onPressNavigateBack" showNavButton="true">
+    <VBox class="sapUiSmallMargin">
+     
+      <f:Form id="FormDisplay354"
+              editable="false">
+              <f:title>
+              </f:title>
+              <f:layout>
+                <f:ResponsiveGridLayout
+                labelSpanXL="4"
+                labelSpanL="4"
+                labelSpanM="12"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="1"
+                singleContainerFullSize="false"/>
+              </f:layout>
+              <f:formContainers>
+                <f:FormContainer title="Basic Info">
+                  <f:formElements>
+                    <f:FormElement label="Supplier ID">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/SupplierID'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Company Name">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/CompanyName'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Contact Name">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/ContactName'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Supplier ID">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/ContactTitle'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                </f:FormContainer>
+              </f:formContainers>
+              <f:formContainers>
+                <f:FormContainer title="Contact Info">
+                  <f:formElements>
+                    <f:FormElement label="Phone number">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Phone'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Fax">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Fax'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+
+                </f:FormContainer>
+              </f:formContainers>
+              <f:formContainers>
+                <f:FormContainer title="Shipping Info">
+                  <f:formElements>
+                    <f:FormElement label="Address">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Address'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Postal Code">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Postal Code'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="City">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/City'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Region">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Region'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                  <f:formElements>
+                    <f:FormElement label="Country">
+                      <f:fields>
+                        <Text text="{path: 'newModel>/fornitori/Country'}" />
+                      </f:fields>
+                    </f:FormElement>
+                  </f:formElements>
+                </f:FormContainer>
+              </f:formContainers>
+            </f:Form>
+        
+    </VBox>
+
+</Page>
+</mvc:View>
+
