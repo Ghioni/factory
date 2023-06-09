@@ -24,8 +24,6 @@ sap.ui.define(
       },
       onRouteMatched: function (e) {
         const id = e.getParameters().arguments.id;
-        const region = e.getParameters().arguments.region;
-        const country = e.getParameters().arguments.country;
 
         this.getView().getModel("odata").read(`/Suppliers(${id})`,{
           success: (res)=>{
@@ -40,8 +38,23 @@ sap.ui.define(
       getRouter: function () {
         return UIComponent.getRouterFor(this);
       },
-      onPressNavigateBack: function(evt){
-        this.getRouter().navTo("RouteHome")
+
+      // Metodo semplice di navigazione ad una specifica Route 
+      // onPressNavigateBack: function(evt){
+      //   this.getRouter().navTo("RouteHome")
+      // }
+
+      //Metodo usando History. Questo metodo prende l'istanza e ti riporta alla pagina principale anche se ci troviamo
+      // in una terza, quarta etc pagina. 
+      onPressNavigateBack: function(){
+       const oHistory = History.getInstance().getPreviousHash();
+
+       if(oHistory !== undefined){
+        window.history.back()
+       }else{
+        this.getRouter().navTo("RouteHome",{})
+       }
+       
       }
       
     });
