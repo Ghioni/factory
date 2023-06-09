@@ -52,7 +52,7 @@ sap.ui.define(
        if(oHistory !== undefined){
         window.history.back()
        }else{
-        this.getRouter().navTo("RouteHome",{})
+        this.getRouter().navTo("RouteHome",{},true)
        }
        
       }
