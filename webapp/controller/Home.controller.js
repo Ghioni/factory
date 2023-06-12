@@ -43,7 +43,7 @@ sap.ui.define(
       },
 
       suppListFactory: function (sId, oContext) {
-        
+
         return new sap.m.ColumnListItem({
           type:"Navigation",
           press: this.navigateOnPress.bind(this),
@@ -103,92 +103,133 @@ sap.ui.define(
 
 // FACTORY DI MATTIA in questo caso si va a costruire il risultato della tabella per riga 
 // let oItems = null;
-//         const sPath = oContext.getPath();
+// const sPath = oContext.getPath();
 
-//         switch (sPath) {
-//           case "/items/0":
-//             oItems = new sap.m.ColumnListItem({
-//               vAlign: "Middle",
-//               cells: [
-//                 new sap.m.Text({
-//                   text: "{oModel>SupplierID}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>CompanyName}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>ContactName}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>ContactTitle}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Address}",
-//                   editable: false,
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>City}",
-//                   editable: false,
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>PostalCode}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Region}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Country}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Phone}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>Fax}",
-//                 }),
-//               ],
-//             });
-//             break;      
-//          case "/items/1":
-//             oItems = new sap.m.ColumnListItem({
-//               vAlign: "Middle",
-//               cells: [
-//                 new sap.m.Text({
-//                   text: "{oModel>SupplierID}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>CompanyName}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>ContactName}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>ContactTitle}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Address}",
-//                   editable: false,
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>City}",
-//                   editable: false,
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>PostalCode}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Region}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Country}",
-//                 }),
-//                 new sap.m.Input({
-//                   value: "{oModel>Phone}",
-//                 }),
-//                 new sap.m.Text({
-//                   text: "{oModel>Fax}",
-//                 }),
-//               ],
-//             });
-//             break;            
-//         }
-//         return oItems;
+// switch (sPath) {
+//   case "/items/0":
+//     oItems = new sap.m.ColumnListItem({
+//       vAlign: "Middle",
+//       cells: [
+//         new sap.m.Button({
+//           text: "{oModel>SupplierID}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>CompanyName}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>ContactName}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>ContactTitle}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Address}",
+//           editable: false,
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>City}",
+//           editable: false,
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>PostalCode}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Region}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Country}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Phone}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>Fax}",
+//         }),
+//       ],
+//     });
+//     break;      
+//  case "/items/1":
+//     oItems = new sap.m.ColumnListItem({
+//       vAlign: "Middle",
+//       cells: [
+//         new sap.m.Text({
+//           text: "{oModel>SupplierID}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>CompanyName}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>ContactName}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>ContactTitle}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Address}",
+//           editable: false,
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>City}",
+//           editable: false,
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>PostalCode}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Region}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Country}",
+//         }),
+//         new sap.m.Input({
+//           value: "{oModel>Phone}",
+//         }),
+//         new sap.m.Text({
+//           text: "{oModel>Fax}",
+//         }),
+//       ],
+//     });
+//     break;  
+//     default:
+//       oItems = new sap.m.ColumnListItem({
+//         vAlign: "Middle",
+//         cells: [
+//           new sap.m.Text({
+//             text: "{oModel>SupplierID}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>CompanyName}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>ContactName}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>ContactTitle}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>Address}",                  
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>City}",
+           
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>PostalCode}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>Region}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>Country}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>Phone}",
+//           }),
+//           new sap.m.Text({
+//             text: "{oModel>Fax}",
+//           }),
+//         ],
+//       });
+
+// }
+// return oItems;
