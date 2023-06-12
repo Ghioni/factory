@@ -101,7 +101,7 @@ sap.ui.define(
   }
 );
 
-// FACTORY DI MATTIA
+// FACTORY DI MATTIA in questo caso si va a costruire il risultato della tabella per riga 
 // let oItems = null;
 //         const sPath = oContext.getPath();
 
